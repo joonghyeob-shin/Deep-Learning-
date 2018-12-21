@@ -6,3 +6,5 @@ def softman(a):
   sum_exp_a = np.sum(exp_a)
   
   return y
+
+# softmax 함수는 학습과정중 출력층에서 사용하고, 추론과정에서는 '생략'하는것이 일반적이다. 
