@@ -1,0 +1,16 @@
+>>> import sys, os
+>>> sys.path.append(os.pardir)                    # 부모디렉터리의 파일 가져오기(mnist.py가 다른 디렉터리에 있기 때문)
+>>> from dataset.mnist import load_mnist
+
+>>> (x_train, t_train), (x_test, t_test) = load_mnist(flatten=True, normalize=False)      # (이미지, 레이블)형식으로 반환
+                                                                                          # normailize=True면 픽셀값을 0.0~1.0사이로,  
+                                                                                          # False면 0~255유지
+
+>>> print(x_train.shape)
+# (60000, 784)
+>>> print(t_train.shape)
+# (60000,)
+>>> print(x_test.shape)
+# (10000, 784)
+>>> print(t_test.shape)
+# (10000,)
